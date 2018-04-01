@@ -5,7 +5,5 @@ set -e
 tagStart=$(expr index "$IMAGE_NAME" :)
 repoName=${IMAGAE_NAME:0:tagStart-1}
 
-for tag in (18.3.1)
-	docker tag $IMAGE_NAME ${repoName}:${tag}
-	docker push ${repoName}:${tag}
-done
+docker tag $IMAGE_NAME ${repoName}:18.3.1
+docker push ${repoName}:18.3.1
